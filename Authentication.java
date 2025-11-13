@@ -1,7 +1,8 @@
 public class Authentication { // class
 
-    public static void main() {
-        // System.out.println("main is the main method in class to execute other methods");
+    public static void main(String[] args) {
+        // System.out.println("main is the main method in class to execute other
+        // methods");
         Authentication createObj = new Authentication();
         createObj.Login();
         createObj.CreateAccount();

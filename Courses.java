@@ -1,5 +1,5 @@
 public class Courses {
-    public static void main() {
+    public static void main(String[] args) {
         Courses createObj = new Courses();
         createObj.GetCoursesList();
         createObj.GetSingleCourseDetails();
