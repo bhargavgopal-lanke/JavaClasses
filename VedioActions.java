@@ -2,6 +2,11 @@ public class VedioActions {
     public static void main(String[] args) {
         VedioActions CreateObj = new VedioActions();
         CreateObj.like(); // calling methods or executing methods
+
+        // create a reference or object to a class
+        // call the method with method name
+        Authentication AuthObj = new Authentication();
+        AuthObj.Login();
     }
 
     public void like() {
