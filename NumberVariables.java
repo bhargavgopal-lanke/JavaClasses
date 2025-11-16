@@ -21,6 +21,7 @@ public class NumberVariables {
         // post incremnt
         System.out.println(1 + count++); // 1 + 5 = 6
         System.out.println(1 + count++); // 1 + 6 = 7
+        // pre increment
         System.out.println(1 + ++count); // 1 + 1 + 7 = 9;
 
         // Otp Generation
