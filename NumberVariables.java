@@ -17,7 +17,18 @@ public class NumberVariables {
         count++;
         System.out.println(count);
         count++;
-        System.out.println(count);
+        System.out.println(count); // 5
+        // post incremnt
+        System.out.println(1 + count++); // 1 + 5 = 6
+        System.out.println(1 + count++); // 1 + 6 = 7
+        System.out.println(1 + ++count); // 1 + 1 + 7 = 9;
+
+        // Otp Generation
+
+        double randomNumber = Math.random();
+        System.out.println("randomNumber: " + randomNumber);
+        int otp = (int) (randomNumber * 10000);
+        System.out.println("otp: " + otp);
 
     }
 }
