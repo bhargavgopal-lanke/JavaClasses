@@ -6,5 +6,18 @@ public class NumberVariables {
         System.out.println(totalPrice);
         String outputMsg = "This is final Price " + totalPrice;
         System.out.println(outputMsg);
+
+        // Count Examples with numbers
+        int count = 1;
+        System.out.println(count);
+        count = count + 1;
+        System.out.println(count);
+        count += 1;
+        System.out.println(count);
+        count++;
+        System.out.println(count);
+        count++;
+        System.out.println(count);
+
     }
 }
