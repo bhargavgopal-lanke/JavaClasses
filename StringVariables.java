@@ -10,5 +10,8 @@ public class StringVariables {
         userCouponCode = userCouponCode.toLowerCase();
         CouponCode = CouponCode.toLowerCase();
         System.out.println(userCouponCode.equals(userCouponCode));
+        String TrimUserName = "    Tony    ";
+        TrimUserName = TrimUserName.trim(); // removing the spaces using trim method.
+        System.out.println(TrimUserName);
     }
 }
