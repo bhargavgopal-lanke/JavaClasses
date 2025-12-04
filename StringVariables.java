@@ -10,5 +10,12 @@ public class StringVariables {
         userCouponCode = userCouponCode.toLowerCase();
         CouponCode = CouponCode.toLowerCase();
         System.out.println(userCouponCode.equals(userCouponCode));
+        String TrimUserName = "    Tony    ";
+        String TrimLastName = "    Lanke     ";
+        TrimLastName = TrimLastName.trim();
+        TrimUserName = TrimUserName.trim(); // removing the spaces using trim method.
+        String Concat = TrimUserName + " " + TrimLastName; // String Concatenation
+        System.out.println(TrimUserName);
+        System.out.println(Concat);
     }
 }
