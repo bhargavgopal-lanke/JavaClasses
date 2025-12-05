@@ -1,8 +1,9 @@
 public class Paytm extends Payments {
     public static void main(String[] args) {
         Paytm obj1 = new Paytm();
-        obj1.CancelOrder();
         obj1.CreateOrderId();
+        obj1.ProcessPayment();
+        obj1.Refund();
     }
 
     public void ProcessPayment() {
