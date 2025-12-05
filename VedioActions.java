@@ -7,6 +7,8 @@ public class VedioActions {
         // call the method with method name
         Authentication AuthObj = new Authentication();
         AuthObj.Login();
+        Courses CourseObj = new Courses();
+        CourseObj.BuyCourse();
     }
 
     public void like() {
