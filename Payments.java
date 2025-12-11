@@ -2,7 +2,6 @@ public class Payments {
     int orderId = 0;
 
     public void CreateOrderId() {
-        orderId = 25;
         System.out.println("create order id " + orderId);
     }
 
