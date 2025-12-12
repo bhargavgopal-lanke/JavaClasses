@@ -6,11 +6,11 @@ public class Paytm extends Payments {
     }
 
     // override is used to override the methods
-    @Override
-    public void CreateOrderId() {
-        orderId = 25;
-        System.out.println("create order id " + orderId);
-    }
+    // @Override
+    // public void CreateOrderId() {
+    //     orderId = 25;
+    //     System.out.println("create order id " + orderId);
+    // }
 
     public void ProcessPayment() {
         System.out.println("Processing payment for the order id " + orderId);
