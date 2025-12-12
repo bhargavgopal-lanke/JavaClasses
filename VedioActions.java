@@ -1,7 +1,7 @@
-public class VedioActions {
+public class VedioActions implements VedioActionsInterface {
     public static void main(String[] args) {
         VedioActions CreateObj = new VedioActions();
-        CreateObj.like(); // calling methods or executing methods
+        CreateObj.Like(); // calling methods or executing methods
 
         // create a reference or object to a class
         // call the method with method name
@@ -9,14 +9,34 @@ public class VedioActions {
         AuthObj.Login();
         Courses CourseObj = new Courses();
         CourseObj.BuyCourse();
+
+        VedioActions createObj2 = new VedioActions();
+        createObj2.Like();
+        createObj2.Clip();
     }
 
-    public void like() {
-        System.out.println("like");
+    public void Like() {
+        System.out.println("like the vedio");
     }
 
-    public void dislike() {
-        System.out.println("Dislike");
+    public void Dislike() {
+        System.out.println("Dislike the vedio");
+    }
+
+    public void Download() {
+        System.out.println("Download the vedio");
+    }
+
+    public void Save() {
+        System.out.println("Save the vedio");
+    }
+
+    public void Clip() {
+        System.out.println("Clip the vedio");
+    }
+
+    public void Report() {
+        System.out.println("report the vedio");
     }
 
     public void share() {
