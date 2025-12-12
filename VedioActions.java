@@ -16,7 +16,7 @@ public class VedioActions implements VedioActionsInterface {
     }
 
     public void Like() {
-        System.out.println("like the vedio");
+        System.out.println("like the vedio" + VedioCategory.MOVIES);
     }
 
     public void Dislike() {
