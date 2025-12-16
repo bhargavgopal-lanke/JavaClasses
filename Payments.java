@@ -4,7 +4,7 @@ public abstract class Payments {
     int orderId = 0;
 
     public void CreateOrderId() {
-        System.out.println("create order id " + orderId);
+        System.out.println("create order id " + orderId + ProductCategory.HOMEAPPLIANCES);
     }
 
     public void Refund() {
@@ -17,6 +17,7 @@ public abstract class Payments {
     }
 
     public abstract void ProcessPayment();
+
     public abstract void VerifyPayment();
 
 }
