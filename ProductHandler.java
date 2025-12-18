@@ -10,34 +10,46 @@ public class ProductHandler {
     // payment
 
     public void getProductDetails(int productId) {
-        if (productId > 100) {
-            try {
+        try {
+            if (productId > 100) {
                 throw new ProductExceptions("Invalid product id");
-            } catch (Exception ex) {
-                System.out.println(ex.getMessage());
-                ex.printStackTrace();
             }
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+            ex.printStackTrace();
         }
+
     }
 
     public void checkInventory(int quantity) {
         // assignment
         // if quantity is more than 10 throw an error message "out of stock"
-        if (quantity > 10) {
-            try {
+        try {
+            if (quantity > 10) {
+
                 throw new CheckInventoryExceptions("out of stock");
-            } catch (Exception ex) {
-                System.out.println(ex.getMessage());
-                ex.printStackTrace();
+            } else {
+                System.out.println("quantity added in the database " + quantity);
             }
-        } else {
-            System.out.println("quantity " + quantity);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+            ex.printStackTrace();
         }
 
     }
 
     public void processPayment(int productId, int quantity, int price) {
+        try {
+            if (price < 100) {
+                System.out.println("Payment Successful");
+            } else {
+                throw new PaymentExceptions("Insufficient funds");
+            }
 
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+            ex.printStackTrace();
+        }
     }
 
 }
