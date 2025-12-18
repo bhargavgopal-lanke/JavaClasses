@@ -11,7 +11,7 @@ public class ProductHandler {
     public void getProductDetails(int productId) {
         if (productId > 100) {
             try {
-                throw new ProductExceptions("Invalid output");
+                throw new ProductExceptions("Invalid product id");
             } catch (Exception ex) {
                 System.out.println(ex.getMessage());
                 ex.printStackTrace();
@@ -19,7 +19,10 @@ public class ProductHandler {
         }
     }
 
-    public void checkInventory(int productId, int quantity) {
+    public void checkInventory(int quantity) {
+        // assignment
+        // if quantity is more than 10 throw an error message "out of stock"
+
 
     }
 
