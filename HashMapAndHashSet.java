@@ -1,14 +1,22 @@
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 
 public class HashMapAndHashSet {
     public static void main(String[] args) {
+        // Arrays example
         String[] emailsArray = { "contact@gmail.com", "contact@gmail.com" };
         System.out.println("emailsArray " + emailsArray.length);
         System.out.println("emailsArray " + emailsArray[0]);
         System.out.println("emailsArray " + emailsArray[1]);
+        // we cant add new values inside an array
+        // below code throws an error
+        // emailsArray[2] = "Something";
+        System.out.println("added new value " + Arrays.toString(emailsArray));
+
+        // Array List examples
         ArrayList<String> emailArrayList = new ArrayList<String>();
         System.out.println("emailArrayList size " + emailArrayList.size());
         emailArrayList.add("test@gmail.com");
