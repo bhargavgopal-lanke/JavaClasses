@@ -2,6 +2,7 @@ public class OopsOne {
     String userName = "";
     String userPwd = "";
 
+    // this is a constructor function
     public OopsOne(String inpMail, String inpPwd) {
         userName = inpMail;
         userPwd = inpPwd;
