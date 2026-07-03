@@ -1,4 +1,4 @@
-public class AndorNot {
+class AndorNot {
     public static void main(String[] args) {
         int adminId = 20;
         int userId = 15;
@@ -39,3 +39,26 @@ public class AndorNot {
     }
 }
 
+
+class SwitchCase {
+    public static void main(String[] args) {
+        String videoCategory = "music";
+
+        switch(videoCategory) {
+            case "sports":
+                System.out.println("Display sports related vedios");
+                break;
+            case "drama":
+                System.out.println("Display drama related vedios");
+                break;
+            case "adventure":
+                System.out.println("Display adventure related vedios");
+                break;
+            case "music":
+                System.out.println("Display music related vedios");
+                break;
+            default:
+                System.out.println("No vedios found on this category");
+        }
+    }
+}
