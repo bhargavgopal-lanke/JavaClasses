@@ -6,22 +6,22 @@ class AndorNot {
         int viewId = 22;
 
         // if(adminId == userId) {
-        //     System.out.println("Welcome Admin " + userId);
+        // System.out.println("Welcome Admin " + userId);
         // };
 
         // if(editorId == userId) {
-        //     System.out.println("Welcome Editor");
+        // System.out.println("Welcome Editor");
         // };
 
         // if(editorId == userId || adminId == userId) {
-        //     System.out.println("You can edit the files");
+        // System.out.println("You can edit the files");
         // } else if(viewId == userId) {
-        //     System.out.println("You can  view the files");
+        // System.out.println("You can view the files");
         // } else {
-        //     System.out.println("You dont have access");
+        // System.out.println("You dont have access");
         // }
 
-        switch(userId) {
+        switch (userId) {
             case 20:
                 System.out.println("Welcome Admin" + " " + userId);
                 break;
@@ -33,18 +33,17 @@ class AndorNot {
                 break;
             default:
                 System.out.println("You dont have access.");
-                
+
         }
 
     }
 }
 
-
 class SwitchCase {
     public static void main(String[] args) {
         String videoCategory = "music";
 
-        switch(videoCategory) {
+        switch (videoCategory) {
             case "sports":
                 System.out.println("Display sports related vedios");
                 break;
@@ -60,5 +59,19 @@ class SwitchCase {
             default:
                 System.out.println("No vedios found on this category");
         }
+    }
+}
+
+class ArrayConcepts {
+    public static void main(String[] args) {
+        String product1title = "This is one";
+        String product2title = "This is two";
+        String product3title = "This is three";
+
+        String[] titles = { "This is one", "This is two", "This is three" };
+
+        System.out.println(titles[0]);
+        System.out.println(titles[1]);
+        System.out.println(titles[2]);
     }
 }
