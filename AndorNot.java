@@ -70,8 +70,26 @@ class ArrayConcepts {
 
         String[] titles = { "This is one", "This is two", "This is three" };
 
+        // System.out.println(titles[0]);
+        // System.out.println(titles[1]);
+        // System.out.println(titles[2]);
+
+        titles[0] = "This is phone 17 blue";
+        titles[1] = "This is phone 16 white";
+        titles[2] = "This is phone 15 red";
+
         System.out.println(titles[0]);
         System.out.println(titles[1]);
         System.out.println(titles[2]);
+
+        int[] prices = { 85000, 90000, 100000 };
+        prices[0] = 20000;
+        prices[1] = 5000;
+        prices[2] = 10000;
+
+        System.out.println(prices[0]);
+        System.out.println(prices[1]);
+        System.out.println(prices[2]);
     }
+
 }
