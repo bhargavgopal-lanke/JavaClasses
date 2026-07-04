@@ -100,21 +100,41 @@ class ArrayLoops {
                 "Apple iPhone 17 (Lavender, 256 GB)", "Apple iPhone 17 (Black, 512 GB)"
         };
         // for (int i = 0; i < titles.length; i++) {
-        //     System.out.println(titles[i]);
+        // System.out.println(titles[i]);
         // }
 
         // prices loop
         int[] prices = { 400000, 20000, 10000 };
 
         // for (int i = 0; i < prices.length; i++) {
-        //     System.out.println(prices[i]);
+        // System.out.println(prices[i]);
         // }
 
         // pricees reverse loop
 
-        for(int i = prices.length - 1; i >= 0; i--) {
+        for (int i = prices.length - 1; i >= 0; i--) {
             System.out.println(prices[i]);
         }
     };
 
+}
+
+class LoopsTwo {
+    public static void main(String[] args) {
+        int[] prices = { 40000, 200000, 333000, 25000, 10000 };
+        // for (int i = 0; i < prices.length; i++) {
+        //   System.out.println(prices[i]);
+        //     if (prices[i] == 25000) {
+        //         // if the value is 25000 skip the next iterations
+        //         break;
+        //     }
+        // }
+
+        for(int i = 0; i < prices.length; i++) {
+            if(prices[i] == 25000) {
+                continue;
+            }
+            System.out.println(prices[i]);
+        }
+    }
 }
