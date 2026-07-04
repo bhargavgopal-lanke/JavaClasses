@@ -93,3 +93,28 @@ class ArrayConcepts {
     }
 
 }
+
+class ArrayLoops {
+    public static void main(String[] args) {
+        String[] titles = { "Apple iPhone 17 (Black, 256 GB)", "Apple iPhone 17 (Sage, 512 GB)",
+                "Apple iPhone 17 (Lavender, 256 GB)", "Apple iPhone 17 (Black, 512 GB)"
+        };
+        // for (int i = 0; i < titles.length; i++) {
+        //     System.out.println(titles[i]);
+        // }
+
+        // prices loop
+        int[] prices = { 400000, 20000, 10000 };
+
+        // for (int i = 0; i < prices.length; i++) {
+        //     System.out.println(prices[i]);
+        // }
+
+        // pricees reverse loop
+
+        for(int i = prices.length - 1; i >= 0; i--) {
+            System.out.println(prices[i]);
+        }
+    };
+
+}
