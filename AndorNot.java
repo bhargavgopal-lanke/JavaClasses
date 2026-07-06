@@ -123,18 +123,51 @@ class LoopsTwo {
     public static void main(String[] args) {
         int[] prices = { 40000, 200000, 333000, 25000, 10000 };
         // for (int i = 0; i < prices.length; i++) {
-        //   System.out.println(prices[i]);
-        //     if (prices[i] == 25000) {
-        //         // if the value is 25000 skip the next iterations
-        //         break;
-        //     }
+        // System.out.println(prices[i]);
+        // if (prices[i] == 25000) {
+        // // if the value is 25000 skip the next iterations
+        // break;
+        // }
         // }
 
-        for(int i = 0; i < prices.length; i++) {
-            if(prices[i] == 25000) {
+        for (int i = 0; i < prices.length; i++) {
+            if (prices[i] == 25000) {
                 continue;
             }
             System.out.println(prices[i]);
+        }
+    }
+}
+
+class WhileLoops {
+    public static void main(String[] args) {
+        int[] prices = { 30000, 20000, 10000, 60000, 70000 };
+
+        int i = 0;
+        boolean morethanfifty = false;
+
+        while (morethanfifty == false) {
+            if (prices[i] > 50000) {
+                morethanfifty = true;
+                System.out.println("found more than 50000 at index" + " " + i);
+            }
+            i++;
+        }
+
+    }
+}
+
+class WhileLoopsTwo {
+    public static void main(String[] args) {
+        String[] mails = { "test@mail.com", "test1@gmail.com", "test2@gmail.com" };
+        boolean mailSent = false;
+        int i = 0;
+        while (mailSent == false) {
+            if (mails[i] == "test@gmail.com") {
+                System.out.println("Mail is sent to" + " " + i);
+                mailSent = true;
+            }
+            i++;
         }
     }
 }
