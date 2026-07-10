@@ -110,7 +110,7 @@ class ArrayLoops {
         // System.out.println(prices[i]);
         // }
 
-        // pricees reverse loop
+        // prices reverse loop
 
         for (int i = prices.length - 1; i >= 0; i--) {
             System.out.println(prices[i]);
@@ -171,3 +171,48 @@ class WhileLoopsTwo {
         }
     }
 }
+
+class OopsOnePractice {
+
+    String useremail = "bhargav@gmail.com";
+    public static void main(String[] args) {
+        OopsOnePractice userCredentialsObj = new OopsOnePractice();
+        userCredentialsObj.useremail = "test@gmail.com";
+        System.out.println(userCredentialsObj.useremail);
+        userCredentialsObj.Login();
+        
+        // This is differnt object and story different memory
+        OopsOnePractice userobjTwo = new OopsOnePractice();
+        System.out.println(userobjTwo.useremail);
+    }
+
+    public void Login() {
+        System.out.println("Invalid login credentials");
+    }
+
+    public void Signup() {
+        System.out.println("Account created. please check your email");
+    }
+
+    public void resetpassword() {
+        System.out.println("Please reset your email and password");
+    }
+}
+
+class OopsContructorExPrac {
+    String userEmail= "";
+    String userPwd = "";
+
+    public OopsContructorExPrac(String email, String pwd) {
+        userEmail = email;
+        userPwd = pwd;
+    }
+
+    public static void main(String[] args) {
+        OopsContructorExPrac ob1user = new OopsContructorExPrac( "test1@gmail.com", "hgdashgdghasdga");
+        System.out.println(ob1user.userEmail);
+        OopsContructorExPrac obj2user = new OopsContructorExPrac("test2@gmail.com", "sdghfjdfsjdf");
+        System.out.println(obj2user.userPwd);
+    }
+}
+
