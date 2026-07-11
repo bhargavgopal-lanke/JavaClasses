@@ -6,22 +6,22 @@ class AndorNot {
         int viewId = 22;
 
         // if(adminId == userId) {
-        //     System.out.println("Welcome Admin " + userId);
+        // System.out.println("Welcome Admin " + userId);
         // };
 
         // if(editorId == userId) {
-        //     System.out.println("Welcome Editor");
+        // System.out.println("Welcome Editor");
         // };
 
         // if(editorId == userId || adminId == userId) {
-        //     System.out.println("You can edit the files");
+        // System.out.println("You can edit the files");
         // } else if(viewId == userId) {
-        //     System.out.println("You can  view the files");
+        // System.out.println("You can view the files");
         // } else {
-        //     System.out.println("You dont have access");
+        // System.out.println("You dont have access");
         // }
 
-        switch(userId) {
+        switch (userId) {
             case 20:
                 System.out.println("Welcome Admin" + " " + userId);
                 break;
@@ -33,18 +33,17 @@ class AndorNot {
                 break;
             default:
                 System.out.println("You dont have access.");
-                
+
         }
 
     }
 }
 
-
 class SwitchCase {
     public static void main(String[] args) {
         String videoCategory = "music";
 
-        switch(videoCategory) {
+        switch (videoCategory) {
             case "sports":
                 System.out.println("Display sports related vedios");
                 break;
@@ -62,3 +61,186 @@ class SwitchCase {
         }
     }
 }
+
+class ArrayConcepts {
+    public static void main(String[] args) {
+        String product1title = "This is one";
+        String product2title = "This is two";
+        String product3title = "This is three";
+
+        String[] titles = { "This is one", "This is two", "This is three" };
+
+        // System.out.println(titles[0]);
+        // System.out.println(titles[1]);
+        // System.out.println(titles[2]);
+
+        titles[0] = "This is phone 17 blue";
+        titles[1] = "This is phone 16 white";
+        titles[2] = "This is phone 15 red";
+
+        System.out.println(titles[0]);
+        System.out.println(titles[1]);
+        System.out.println(titles[2]);
+
+        int[] prices = { 85000, 90000, 100000 };
+        prices[0] = 20000;
+        prices[1] = 5000;
+        prices[2] = 10000;
+
+        System.out.println(prices[0]);
+        System.out.println(prices[1]);
+        System.out.println(prices[2]);
+    }
+
+}
+
+class ArrayLoops {
+    public static void main(String[] args) {
+        String[] titles = { "Apple iPhone 17 (Black, 256 GB)", "Apple iPhone 17 (Sage, 512 GB)",
+                "Apple iPhone 17 (Lavender, 256 GB)", "Apple iPhone 17 (Black, 512 GB)"
+        };
+        // for (int i = 0; i < titles.length; i++) {
+        // System.out.println(titles[i]);
+        // }
+
+        // prices loop
+        int[] prices = { 400000, 20000, 10000 };
+
+        // for (int i = 0; i < prices.length; i++) {
+        // System.out.println(prices[i]);
+        // }
+
+        // prices reverse loop
+
+        for (int i = prices.length - 1; i >= 0; i--) {
+            System.out.println(prices[i]);
+        }
+    };
+
+}
+
+class LoopsTwo {
+    public static void main(String[] args) {
+        int[] prices = { 40000, 200000, 333000, 25000, 10000 };
+        // for (int i = 0; i < prices.length; i++) {
+        // System.out.println(prices[i]);
+        // if (prices[i] == 25000) {
+        // // if the value is 25000 skip the next iterations
+        // break;
+        // }
+        // }
+
+        for (int i = 0; i < prices.length; i++) {
+            if (prices[i] == 25000) {
+                continue;
+            }
+            System.out.println(prices[i]);
+        }
+    }
+}
+
+class WhileLoops {
+    public static void main(String[] args) {
+        int[] prices = { 30000, 20000, 10000, 60000, 70000 };
+
+        int i = 0;
+        boolean morethanfifty = false;
+
+        while (morethanfifty == false) {
+            if (prices[i] > 50000) {
+                morethanfifty = true;
+                System.out.println("found more than 50000 at index" + " " + i);
+            }
+            i++;
+        }
+
+    }
+}
+
+class WhileLoopsTwo {
+    public static void main(String[] args) {
+        String[] mails = { "test@mail.com", "test1@gmail.com", "test2@gmail.com" };
+        boolean mailSent = false;
+        int i = 0;
+        while (mailSent == false) {
+            if (mails[i] == "test@gmail.com") {
+                System.out.println("Mail is sent to" + " " + i);
+                mailSent = true;
+            }
+            i++;
+        }
+    }
+}
+
+class OopsOnePractice {
+
+    String useremail = "bhargav@gmail.com";
+    public static void main(String[] args) {
+        OopsOnePractice userCredentialsObj = new OopsOnePractice();
+        userCredentialsObj.useremail = "test@gmail.com";
+        System.out.println(userCredentialsObj.useremail);
+        userCredentialsObj.Login();
+        
+        // This is differnt object and story different memory
+        OopsOnePractice userobjTwo = new OopsOnePractice();
+        System.out.println(userobjTwo.useremail);
+    }
+
+    public void Login() {
+        System.out.println("Invalid login credentials");
+    }
+
+    public void Signup() {
+        System.out.println("Account created. please check your email");
+    }
+
+    public void resetpassword() {
+        System.out.println("Please reset your email and password");
+    }
+}
+
+class OopsContructorExPrac {
+    String userEmail= "";
+    String userPwd = "";
+
+    public OopsContructorExPrac(String email, String pwd) {
+        userEmail = email;
+        userPwd = pwd;
+    }
+
+    public static void main(String[] args) {
+        OopsContructorExPrac ob1user = new OopsContructorExPrac( "test1@gmail.com", "hgdashgdghasdga");
+        System.out.println(ob1user.userEmail);
+        OopsContructorExPrac obj2user = new OopsContructorExPrac("test2@gmail.com", "sdghfjdfsjdf");
+        System.out.println(obj2user.userPwd);
+    }
+}
+
+// inheritance very important and in real time we use it a lot
+
+class inheritOne {
+    String userEmail = "bhargav@gmail.com";
+    String userPwd = "123456";
+
+    public static void main(String[] args) {
+        inheritOne userObj = new inheritOne();
+        System.out.println(userObj.userEmail);
+    }
+
+    public void Login() {
+        System.out.println("Logged in");
+    }
+
+    public void Signup() {
+        System.out.println("Please sign up");        
+    }    
+}
+
+class inheritTwo extends inheritOne {
+    public static void main(String[] args) {
+        inheritTwo inheritOneObj = new inheritTwo();
+        System.out.println(inheritOneObj.userEmail);
+        System.out.println(inheritOneObj.userPwd);
+    }
+}
+
