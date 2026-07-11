@@ -218,24 +218,23 @@ class OopsContructorExPrac {
 
 // inheritance very important and in real time we use it a lot
 
+// This is parent class
 class inheritOne {
     String userEmail = "bhargav@gmail.com";
     String userPwd = "123456";
-
-    public static void main(String[] args) {
-        inheritOne userObj = new inheritOne();
-        System.out.println(userObj.userEmail);
-    }
 
     public void Login() {
         System.out.println("Logged in");
     }
 
     public void Signup() {
-        System.out.println("Please sign up");        
+        System.out.println("Account Created");        
     }    
 }
 
+// we have to use the word extends to inherit the properties or methods from another class
+
+// This is child class
 class inheritTwo extends inheritOne {
     public static void main(String[] args) {
         inheritTwo inheritOneObj = new inheritTwo();
