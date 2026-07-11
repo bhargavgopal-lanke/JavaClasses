@@ -17,11 +17,13 @@ public class Payments {
     }
 
     public void CancelOrder() {
-        System.out.println("Order was cancelled");
+        orderId = 15;
+        System.out.println("Order was cancelled for this" + " " + orderId);
     }
 
     public void refundOrder() {
-        System.out.println("Refund has been processed");
+        orderId = 40;
+        System.out.println("Refund initiated for order" + " " + orderId);
     }
 
 }
