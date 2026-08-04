@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
+
 class AndorNot {
     public static void main(String[] args) {
         int adminId = 20;
@@ -176,12 +178,13 @@ class WhileLoopsTwo {
 class OopsOnePractice {
 
     String useremail = "bhargav@gmail.com";
+
     public static void main(String[] args) {
         OopsOnePractice userCredentialsObj = new OopsOnePractice();
         userCredentialsObj.useremail = "test@gmail.com";
         System.out.println(userCredentialsObj.useremail);
         userCredentialsObj.Login();
-        
+
         // This is differnt object and story different memory
         OopsOnePractice userobjTwo = new OopsOnePractice();
         System.out.println(userobjTwo.useremail);
@@ -201,7 +204,7 @@ class OopsOnePractice {
 }
 
 class OopsContructorExPrac {
-    String userEmail= "";
+    String userEmail = "";
     String userPwd = "";
 
     public OopsContructorExPrac(String email, String pwd) {
@@ -210,7 +213,7 @@ class OopsContructorExPrac {
     }
 
     public static void main(String[] args) {
-        OopsContructorExPrac ob1user = new OopsContructorExPrac( "test1@gmail.com", "hgdashgdghasdga");
+        OopsContructorExPrac ob1user = new OopsContructorExPrac("test1@gmail.com", "hgdashgdghasdga");
         System.out.println(ob1user.userEmail);
         OopsContructorExPrac obj2user = new OopsContructorExPrac("test2@gmail.com", "sdghfjdfsjdf");
         System.out.println(obj2user.userPwd);
@@ -229,11 +232,12 @@ class inheritOne {
     }
 
     public void Signup() {
-        System.out.println("Account Created");        
-    }    
+        System.out.println("Account Created");
+    }
 }
 
-// we have to use the word extends to inherit the properties or methods from another class
+// we have to use the word extends to inherit the properties or methods from
+// another class
 
 // This is child class
 class inheritTwo extends inheritOne {
@@ -244,9 +248,7 @@ class inheritTwo extends inheritOne {
     }
 }
 
-
 // ArrayList
-
 
 class ArrayOnePractice {
     public static void main(String[] args) {
@@ -258,9 +260,24 @@ class ArrayOnePractice {
         productsArray.add("bhargav 2");
         productsArray.add("bhargav 3");
         System.out.println(productsArray.get(0));
-        for(int i =0; i < productsArray.size(); i++) {
+        for (int i = 0; i < productsArray.size(); i++) {
             System.out.println(productsArray.get(i));
         }
     }
 }
 
+// Linked list practice
+
+class LinkedListPracticeOne {
+    public static void main(String[] args) {
+        LinkedList<String> RetailProducts = new LinkedList<String>();
+        RetailProducts.add("Iphon 17");
+        RetailProducts.add("Iphone 16");
+        RetailProducts.add("Iphone 15");
+        System.out.println(RetailProducts.size());
+        RetailProducts.set(1, "Xbox gaming");
+        for (int i = 0; i < RetailProducts.size(); i++) {
+            System.out.println(RetailProducts.get(i));
+        }
+    }
+}
