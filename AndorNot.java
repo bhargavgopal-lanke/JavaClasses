@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 
 class AndorNot {
@@ -279,5 +281,41 @@ class LinkedListPracticeOne {
         for (int i = 0; i < RetailProducts.size(); i++) {
             System.out.println(RetailProducts.get(i));
         }
+    }
+}
+
+
+// Hash Map prctice
+// key is unique
+// stores key value pairs
+// remove method removes one value
+// clear method emptys the hashmap
+
+class HashMapPractice {
+    public static void main(String[] args) {
+        HashMap<String, String> keyValueproducts = new HashMap<String, String>();
+        keyValueproducts.put("title",  "The art of living");
+        keyValueproducts.put("price", "200");
+        keyValueproducts.put("Author", "Bhargav Gopal");
+        keyValueproducts.put("Sellers", "Amazon");
+        System.out.println(keyValueproducts.get("title"));
+        System.out.println(keyValueproducts.size());
+        keyValueproducts.remove("Author");
+        System.out.println(keyValueproducts.size());
+        keyValueproducts.clear();
+        System.out.println(keyValueproducts.size());
+
+    }
+}
+
+
+// Hashset Practice
+// Its stores data but wont accept duplicates
+class hashsetPractice {
+    public static void main(String[] args) {
+        HashSet<String> noDuplicatesArray = new HashSet<String>();
+        noDuplicatesArray.add("This is bhargav");
+        noDuplicatesArray.add("This is bhargav");
+        System.out.println(noDuplicatesArray.size());
     }
 }
