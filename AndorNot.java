@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 class AndorNot {
     public static void main(String[] args) {
         int adminId = 20;
@@ -240,6 +241,19 @@ class inheritTwo extends inheritOne {
         inheritTwo inheritOneObj = new inheritTwo();
         System.out.println(inheritOneObj.userEmail);
         System.out.println(inheritOneObj.userPwd);
+    }
+}
+
+
+// ArrayList
+
+
+class ArrayOnePractice {
+    public static void main(String[] args) {
+        ArrayList<String> productsArray = new ArrayList<>();
+        System.out.println(productsArray.size());
+        productsArray.add("bhargav");
+        System.out.println(productsArray.get(0));
     }
 }
 
