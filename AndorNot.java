@@ -284,7 +284,6 @@ class LinkedListPracticeOne {
     }
 }
 
-
 // Hash Map prctice
 // key is unique
 // stores key value pairs
@@ -294,7 +293,7 @@ class LinkedListPracticeOne {
 class HashMapPractice {
     public static void main(String[] args) {
         HashMap<String, String> keyValueproducts = new HashMap<String, String>();
-        keyValueproducts.put("title",  "The art of living");
+        keyValueproducts.put("title", "The art of living");
         keyValueproducts.put("price", "200");
         keyValueproducts.put("Author", "Bhargav Gopal");
         keyValueproducts.put("Sellers", "Amazon");
@@ -308,7 +307,6 @@ class HashMapPractice {
     }
 }
 
-
 // Hashset Practice
 // Its stores data but wont accept duplicates
 class hashsetPractice {
@@ -319,3 +317,19 @@ class hashsetPractice {
         System.out.println(noDuplicatesArray.size());
     }
 }
+
+// Exception Handling in java
+// basic example
+
+class ExceptionJavaErrors {
+    public static void main(String[] args) {
+        try {
+            String[] emailsList = { "test1@gmail.com", "test2@gmail.com" };
+            System.out.println(emailsList[2]);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
+}
+
+// create our own custom class for exception handling
