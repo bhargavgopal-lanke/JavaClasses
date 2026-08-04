@@ -253,7 +253,14 @@ class ArrayOnePractice {
         ArrayList<String> productsArray = new ArrayList<>();
         System.out.println(productsArray.size());
         productsArray.add("bhargav");
+        productsArray.add("bhargav");
+        productsArray.add("bhargav Gopal");
+        productsArray.add("bhargav 2");
+        productsArray.add("bhargav 3");
         System.out.println(productsArray.get(0));
+        for(int i =0; i < productsArray.size(); i++) {
+            System.out.println(productsArray.get(i));
+        }
     }
 }
 
