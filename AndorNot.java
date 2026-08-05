@@ -1,3 +1,8 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+
 class AndorNot {
     public static void main(String[] args) {
         int adminId = 20;
@@ -175,12 +180,13 @@ class WhileLoopsTwo {
 class OopsOnePractice {
 
     String useremail = "bhargav@gmail.com";
+
     public static void main(String[] args) {
         OopsOnePractice userCredentialsObj = new OopsOnePractice();
         userCredentialsObj.useremail = "test@gmail.com";
         System.out.println(userCredentialsObj.useremail);
         userCredentialsObj.Login();
-        
+
         // This is differnt object and story different memory
         OopsOnePractice userobjTwo = new OopsOnePractice();
         System.out.println(userobjTwo.useremail);
@@ -200,7 +206,7 @@ class OopsOnePractice {
 }
 
 class OopsContructorExPrac {
-    String userEmail= "";
+    String userEmail = "";
     String userPwd = "";
 
     public OopsContructorExPrac(String email, String pwd) {
@@ -209,7 +215,7 @@ class OopsContructorExPrac {
     }
 
     public static void main(String[] args) {
-        OopsContructorExPrac ob1user = new OopsContructorExPrac( "test1@gmail.com", "hgdashgdghasdga");
+        OopsContructorExPrac ob1user = new OopsContructorExPrac("test1@gmail.com", "hgdashgdghasdga");
         System.out.println(ob1user.userEmail);
         OopsContructorExPrac obj2user = new OopsContructorExPrac("test2@gmail.com", "sdghfjdfsjdf");
         System.out.println(obj2user.userPwd);
@@ -218,24 +224,24 @@ class OopsContructorExPrac {
 
 // inheritance very important and in real time we use it a lot
 
+// This is parent class
 class inheritOne {
     String userEmail = "bhargav@gmail.com";
     String userPwd = "123456";
-
-    public static void main(String[] args) {
-        inheritOne userObj = new inheritOne();
-        System.out.println(userObj.userEmail);
-    }
 
     public void Login() {
         System.out.println("Logged in");
     }
 
     public void Signup() {
-        System.out.println("Please sign up");        
-    }    
+        System.out.println("Account Created");
+    }
 }
 
+// we have to use the word extends to inherit the properties or methods from
+// another class
+
+// This is child class
 class inheritTwo extends inheritOne {
     public static void main(String[] args) {
         inheritTwo inheritOneObj = new inheritTwo();
@@ -244,3 +250,130 @@ class inheritTwo extends inheritOne {
     }
 }
 
+// ArrayList
+
+class ArrayOnePractice {
+    public static void main(String[] args) {
+        ArrayList<String> productsArray = new ArrayList<>();
+        System.out.println(productsArray.size());
+        productsArray.add("bhargav");
+        productsArray.add("bhargav");
+        productsArray.add("bhargav Gopal");
+        productsArray.add("bhargav 2");
+        productsArray.add("bhargav 3");
+        System.out.println(productsArray.get(0));
+        for (int i = 0; i < productsArray.size(); i++) {
+            System.out.println(productsArray.get(i));
+        }
+    }
+}
+
+// Linked list practice
+
+class LinkedListPracticeOne {
+    public static void main(String[] args) {
+        LinkedList<String> RetailProducts = new LinkedList<String>();
+        RetailProducts.add("Iphon 17");
+        RetailProducts.add("Iphone 16");
+        RetailProducts.add("Iphone 15");
+        System.out.println(RetailProducts.size());
+        RetailProducts.set(1, "Xbox gaming");
+        for (int i = 0; i < RetailProducts.size(); i++) {
+            System.out.println(RetailProducts.get(i));
+        }
+    }
+}
+
+// Hash Map prctice
+// key is unique
+// stores key value pairs
+// remove method removes one value
+// clear method emptys the hashmap
+
+class HashMapPractice {
+    public static void main(String[] args) {
+        HashMap<String, String> keyValueproducts = new HashMap<String, String>();
+        keyValueproducts.put("title", "The art of living");
+        keyValueproducts.put("price", "200");
+        keyValueproducts.put("Author", "Bhargav Gopal");
+        keyValueproducts.put("Sellers", "Amazon");
+        System.out.println(keyValueproducts.get("title"));
+        System.out.println(keyValueproducts.size());
+        keyValueproducts.remove("Author");
+        System.out.println(keyValueproducts.size());
+        keyValueproducts.clear();
+        System.out.println(keyValueproducts.size());
+
+    }
+}
+
+// Hashset Practice
+// Its stores data but wont accept duplicates
+class hashsetPractice {
+    public static void main(String[] args) {
+        HashSet<String> noDuplicatesArray = new HashSet<String>();
+        noDuplicatesArray.add("This is bhargav");
+        noDuplicatesArray.add("This is bhargav");
+        System.out.println(noDuplicatesArray.size());
+    }
+}
+
+// Exception Handling in java
+// basic example
+
+class ExceptionJavaErrors {
+    public static void main(String[] args) {
+        try {
+            String[] emailsList = { "test1@gmail.com", "test2@gmail.com" };
+            System.out.println(emailsList[2]);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
+}
+
+// create our own custom class for exception handling
+
+class ProductsExceptions extends Exception {
+    public ProductsExceptions(String message) {
+        super(message);
+    }
+}
+
+class inventoryExceptions extends Exception {
+    public inventoryExceptions(String message) {
+        super(message); // call the parent constructor inventory exceptions
+    }
+}
+
+class AmazonProdcutsPage {
+    public static void main(String[] args) {
+        AmazonProdcutsPage productmethods = new AmazonProdcutsPage();
+        productmethods.getProducts(100);
+        productmethods.checkInventory(0, 0, 9);
+    };
+
+    public void getProducts(int product) {
+        try {
+            if (product > 100) {
+                throw new ProductsExceptions("Products should not be more than 100");
+            } else {
+                System.out.println("products found");
+            }
+        } catch (ProductsExceptions ex) {
+            System.out.println(ex.getMessage());
+        }
+    };
+
+    public void checkInventory(int quantity, int items, int price) {
+        try {
+            if (price < 10) {
+                throw new inventoryExceptions("Items not found for less than 10");
+            } else {
+                System.out.println("Please check the products");
+            }
+        } catch (inventoryExceptions ex) {
+            System.out.println(ex.getMessage());
+        }
+    };
+}

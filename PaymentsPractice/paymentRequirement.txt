@@ -1,0 +1,21 @@
+Payments -
+    Create order id
+    // for cancelling the order and for refund we can pass the ID's
+    // make them as common code to use them across all payment gateways
+    cancelorder
+    refundorder
+
+Justpay
+    processpayment
+    verifypayment
+    
+
+PayU
+    processpayment
+    verifypayment
+    
+
+Paytm
+    processpayment
+    verifypayment
+    
