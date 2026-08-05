@@ -390,13 +390,14 @@ class AmazonProdcutsPage {
 class WorkingWithFiles {
     public static void main(String[] args) {
         File newfile = new File("uploads/text/email.csv");
-        try {
-            FileWriter nFileWriter = new FileWriter(newfile);
-            nFileWriter.write("Email");
-            nFileWriter.close();
-        } catch (Exception ex) {
-            System.out.println(ex.getMessage());
-        }
+        
+        // try {
+        //     FileWriter nFileWriter = new FileWriter(newfile);
+        //     nFileWriter.write("Email");
+        //     nFileWriter.close();
+        // } catch (Exception ex) {
+        //     System.out.println(ex.getMessage());
+        // }
     }
 };
 
