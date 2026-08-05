@@ -416,5 +416,10 @@ class StreamApiPractice {
                 .filter(animal -> animal.startsWith("m"))
                 .map(x -> x.toUpperCase())
                 .forEach(System.out::println);
+
+        // find prime numbers using stream api
+
+        int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 22 };
+        Arrays.stream(numbers).filter(y -> y % 2 == 0).forEach(System.out::println);
     }
 }
