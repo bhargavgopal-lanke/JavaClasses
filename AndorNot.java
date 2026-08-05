@@ -333,3 +333,47 @@ class ExceptionJavaErrors {
 }
 
 // create our own custom class for exception handling
+
+class ProductsExceptions extends Exception {
+    public ProductsExceptions(String message) {
+        super(message);
+    }
+}
+
+class inventoryExceptions extends Exception {
+    public inventoryExceptions(String message) {
+        super(message); // call the parent constructor inventory exceptions
+    }
+}
+
+class AmazonProdcutsPage {
+    public static void main(String[] args) {
+        AmazonProdcutsPage productmethods = new AmazonProdcutsPage();
+        productmethods.getProducts(100);
+        productmethods.checkInventory(0, 0, 9);
+    };
+
+    public void getProducts(int product) {
+        try {
+            if (product > 100) {
+                throw new ProductsExceptions("Products should not be more than 100");
+            } else {
+                System.out.println("products found");
+            }
+        } catch (ProductsExceptions ex) {
+            System.out.println(ex.getMessage());
+        }
+    };
+
+    public void checkInventory(int quantity, int items, int price) {
+        try {
+            if (price < 10) {
+                throw new inventoryExceptions("Items not found for less than 10");
+            } else {
+                System.out.println("Please check the products");
+            }
+        } catch (inventoryExceptions ex) {
+            System.out.println(ex.getMessage());
+        }
+    };
+}
