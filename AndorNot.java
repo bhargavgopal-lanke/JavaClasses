@@ -1,7 +1,11 @@
+import java.io.File;
+import java.io.FileWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.stream.Stream;
 
 class AndorNot {
     public static void main(String[] args) {
@@ -254,6 +258,8 @@ class inheritTwo extends inheritOne {
 
 class ArrayOnePractice {
     public static void main(String[] args) {
+
+        // we can add and update the values
         ArrayList<String> productsArray = new ArrayList<>();
         System.out.println(productsArray.size());
         productsArray.add("bhargav");
@@ -376,4 +382,45 @@ class AmazonProdcutsPage {
             System.out.println(ex.getMessage());
         }
     };
+}
+
+// working with files create a file
+// this is not working
+
+class WorkingWithFiles {
+    public static void main(String[] args) {
+        File newfile = new File("uploads/text/email.csv");
+        
+        // try {
+        //     FileWriter nFileWriter = new FileWriter(newfile);
+        //     nFileWriter.write("Email");
+        //     nFileWriter.close();
+        // } catch (Exception ex) {
+        //     System.out.println(ex.getMessage());
+        // }
+    }
+};
+
+// Stream Api
+
+class StreamApiPractice {
+    public static void main(String[] args) {
+        String[] emails = { "test1@gmail.com", "test2@gmail.com", "test3@gmail.com" };
+        for (int i = 0; i < emails.length; i++) {
+            System.out.println(emails[i]);
+        }
+        Arrays.stream(emails)
+                .map(mail -> mail.toUpperCase() + " " + 1500)
+                .forEach(System.out::println);
+        String[] animlas = { "elephant", "lion", "zebra", "monkey", "moth" };
+        Arrays.stream(animlas)
+                .filter(animal -> animal.startsWith("m"))
+                .map(x -> x.toUpperCase())
+                .forEach(System.out::println);
+
+        // find prime numbers using stream api
+
+        int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 22 };
+        Arrays.stream(numbers).filter(y -> y % 2 == 0).forEach(System.out::println);
+    }
 }
